@@ -1,6 +1,6 @@
 package br.com.cielo.extrato.util;
 
-import br.com.cielo.extrato.model.Lancamento;
+import br.com.cielo.extrato.domain.Lancamento;
 
 public class LancamentoBuilder {
 	private String descricao;

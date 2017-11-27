@@ -1,4 +1,4 @@
-package br.com.cielo.extrato.model;
+package br.com.cielo.extrato.domain;
 
 public class ContaCorrente {
 	private int codigoBanco;

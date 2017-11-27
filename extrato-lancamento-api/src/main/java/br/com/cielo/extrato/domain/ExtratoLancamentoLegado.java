@@ -1,4 +1,4 @@
-package br.com.cielo.extrato.model;
+package br.com.cielo.extrato.domain;
 
 import java.util.ArrayList;
 import java.util.List;

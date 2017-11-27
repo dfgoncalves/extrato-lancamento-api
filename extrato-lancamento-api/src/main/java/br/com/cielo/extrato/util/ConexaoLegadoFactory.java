@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import br.com.cielo.extrato.domain.ExtratoLancamentoLegado;
 import br.com.cielo.extrato.exception.Http500Exception;
-import br.com.cielo.extrato.model.ExtratoLancamentoLegado;
 
 import com.google.gson.Gson;
 
