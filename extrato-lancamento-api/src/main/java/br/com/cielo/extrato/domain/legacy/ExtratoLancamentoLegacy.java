@@ -1,18 +1,21 @@
-package br.com.cielo.extrato.domain;
+package br.com.cielo.extrato.domain.legacy;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExtratoLancamentoLegado {
+import br.com.cielo.extrato.domain.ContaCorrente;
+import br.com.cielo.extrato.domain.TotalizadorLancamento;
+
+public class ExtratoLancamentoLegacy {
 
 	private TotalizadorLancamento totalControleLancamento;
-	private List<ControleLancamento> listaControleLancamento;
+	private List<ControleLancamentoLegacy> listaControleLancamento;
 	private int indice;
 	private int tamanhoPagina;
 	private int totalElements;
 
-	public ExtratoLancamentoLegado(TotalizadorLancamento totalControleLancamento,
-			List<ControleLancamento> listaControleLancamento, int indice,
+	public ExtratoLancamentoLegacy(TotalizadorLancamento totalControleLancamento,
+			List<ControleLancamentoLegacy> listaControleLancamento, int indice,
 			int tamanhoPagina, int totalElements) {
 		super();
 		this.totalControleLancamento = totalControleLancamento;
@@ -22,13 +25,13 @@ public class ExtratoLancamentoLegado {
 		this.totalElements = totalElements;
 	}
 	
-	public List<ControleLancamento> obterTodosLancamentos(ContaCorrente contaCorrentePesquisada){
-		//esta sendo abstraído a paginação do sistema legado.
+	public List<ControleLancamentoLegacy> obterTodosLancamentos(ContaCorrente contaCorrentePesquisada){
+		//esta sendo abstraï¿½do a paginaï¿½ï¿½o do sistema legado.
 		if(contaCorrentePesquisada == null){
 			return listaControleLancamento;
 		} else {
-			List<ControleLancamento> lancamentoLocalizados = new ArrayList<ControleLancamento>();
-			for(ControleLancamento lancamento : listaControleLancamento){
+			List<ControleLancamentoLegacy> lancamentoLocalizados = new ArrayList<ControleLancamentoLegacy>();
+			for(ControleLancamentoLegacy lancamento : listaControleLancamento){
 				ContaCorrente contaCorrenteLancamento = lancamento.getLancamentoContaCorrenteCliente().getDadosDomicilioBancario();
 				if(contaCorrenteLancamento.equals(contaCorrentePesquisada)){
 					lancamentoLocalizados.add(lancamento);
@@ -48,12 +51,12 @@ public class ExtratoLancamentoLegado {
 		this.totalControleLancamento = totalControleLancamento;
 	}
 
-	public List<ControleLancamento> getListaControleLancamento() {
+	public List<ControleLancamentoLegacy> getListaControleLancamento() {
 		return listaControleLancamento;
 	}
 
 	public void setListaControleLancamento(
-			List<ControleLancamento> listaControleLancamento) {
+			List<ControleLancamentoLegacy> listaControleLancamento) {
 		this.listaControleLancamento = listaControleLancamento;
 	}
 

@@ -1,6 +1,8 @@
-package br.com.cielo.extrato.domain;
+package br.com.cielo.extrato.domain.legacy;
 
-public class ControleLancamento {
+import br.com.cielo.extrato.domain.LancamentoContaCorrente;
+
+public class ControleLancamentoLegacy {
 	private LancamentoContaCorrente lancamentoContaCorrenteCliente;
 	private String dataEfetivaLancamento;
 	private String dataLancamentoContaCorrenteCliente;
@@ -15,7 +17,7 @@ public class ControleLancamento {
 	private long dateLancamentoContaCorrenteCliente;
 	private long dateEfetivaLancamento;
 
-	public ControleLancamento(LancamentoContaCorrente lancamentoContaCorrenteCliente,
+	public ControleLancamentoLegacy(LancamentoContaCorrente lancamentoContaCorrenteCliente,
 			String dataEfetivaLancamento,
 			String dataLancamentoContaCorrenteCliente, int numeroEvento,
 			String descricaoGrupoPagamento, int codigoIdentificadorUnico,
