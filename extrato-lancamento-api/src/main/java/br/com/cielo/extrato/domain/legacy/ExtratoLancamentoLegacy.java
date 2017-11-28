@@ -4,17 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.cielo.extrato.domain.ContaCorrente;
-import br.com.cielo.extrato.domain.TotalizadorLancamento;
 
+/**
+ * 
+ * @author Diogo Ferreira Gonçalves
+ *
+ */
 public class ExtratoLancamentoLegacy {
 
-	private TotalizadorLancamento totalControleLancamento;
+	private TotalizadorLancamentoLegacy totalControleLancamento;
 	private List<ControleLancamentoLegacy> listaControleLancamento;
 	private int indice;
 	private int tamanhoPagina;
 	private int totalElements;
 
-	public ExtratoLancamentoLegacy(TotalizadorLancamento totalControleLancamento,
+	/**
+	 * 
+	 * @param totalControleLancamento
+	 * @param listaControleLancamento
+	 * @param indice
+	 * @param tamanhoPagina
+	 * @param totalElements
+	 */
+	public ExtratoLancamentoLegacy(TotalizadorLancamentoLegacy totalControleLancamento,
 			List<ControleLancamentoLegacy> listaControleLancamento, int indice,
 			int tamanhoPagina, int totalElements) {
 		super();
@@ -25,6 +37,11 @@ public class ExtratoLancamentoLegacy {
 		this.totalElements = totalElements;
 	}
 	
+	/**
+	 * 
+	 * @param contaCorrentePesquisada
+	 * @return
+	 */
 	public List<ControleLancamentoLegacy> obterTodosLancamentos(ContaCorrente contaCorrentePesquisada){
 		//esta sendo abstra�do a pagina��o do sistema legado.
 		if(contaCorrentePesquisada == null){
@@ -41,45 +58,84 @@ public class ExtratoLancamentoLegacy {
 		}
 	}
 	
-
-	public TotalizadorLancamento getTotalControleLancamento() {
+	/**
+	 * 
+	 * @return
+	 */
+	public TotalizadorLancamentoLegacy getTotalControleLancamento() {
 		return totalControleLancamento;
 	}
 
+	/**
+	 * 
+	 * @param totalControleLancamento
+	 */
 	public void setTotalControleLancamento(
-			TotalizadorLancamento totalControleLancamento) {
+			TotalizadorLancamentoLegacy totalControleLancamento) {
 		this.totalControleLancamento = totalControleLancamento;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public List<ControleLancamentoLegacy> getListaControleLancamento() {
 		return listaControleLancamento;
 	}
 
+	/**
+	 * 
+	 * @param listaControleLancamento
+	 */
 	public void setListaControleLancamento(
 			List<ControleLancamentoLegacy> listaControleLancamento) {
 		this.listaControleLancamento = listaControleLancamento;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getIndice() {
 		return indice;
 	}
 
+	/**
+	 * 
+	 * @param indice
+	 */
 	public void setIndice(int indice) {
 		this.indice = indice;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getTamanhoPagina() {
 		return tamanhoPagina;
 	}
 
+	/**
+	 * 
+	 * @param tamanhoPagina
+	 */
 	public void setTamanhoPagina(int tamanhoPagina) {
 		this.tamanhoPagina = tamanhoPagina;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getTotalElements() {
 		return totalElements;
 	}
 
+	/**
+	 * 
+	 * @param totalElements
+	 */
 	public void setTotalElements(int totalElements) {
 		this.totalElements = totalElements;
 	}

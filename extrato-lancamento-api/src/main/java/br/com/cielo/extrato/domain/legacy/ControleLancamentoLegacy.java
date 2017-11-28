@@ -1,9 +1,12 @@
 package br.com.cielo.extrato.domain.legacy;
 
-import br.com.cielo.extrato.domain.LancamentoContaCorrente;
-
+/**
+ * 
+ * @author Diogo Ferreira Gonçalves
+ *
+ */
 public class ControleLancamentoLegacy {
-	private LancamentoContaCorrente lancamentoContaCorrenteCliente;
+	private LancamentoLegacy lancamentoContaCorrenteCliente;
 	private String dataEfetivaLancamento;
 	private String dataLancamentoContaCorrenteCliente;
 	private int numeroEvento;
@@ -17,7 +20,23 @@ public class ControleLancamentoLegacy {
 	private long dateLancamentoContaCorrenteCliente;
 	private long dateEfetivaLancamento;
 
-	public ControleLancamentoLegacy(LancamentoContaCorrente lancamentoContaCorrenteCliente,
+	/**
+	 * 
+	 * @param lancamentoContaCorrenteCliente
+	 * @param dataEfetivaLancamento
+	 * @param dataLancamentoContaCorrenteCliente
+	 * @param numeroEvento
+	 * @param descricaoGrupoPagamento
+	 * @param codigoIdentificadorUnico
+	 * @param nomeBanco
+	 * @param quantidadeLancamentoRemessa
+	 * @param numeroRaizCNPJ
+	 * @param numeroSufixoCNPJ
+	 * @param valorLancamentoRemessa
+	 * @param dateLancamentoContaCorrenteCliente
+	 * @param dateEfetivaLancamento
+	 */
+	public ControleLancamentoLegacy(LancamentoLegacy lancamentoContaCorrenteCliente,
 			String dataEfetivaLancamento,
 			String dataLancamentoContaCorrenteCliente, int numeroEvento,
 			String descricaoGrupoPagamento, int codigoIdentificadorUnico,
@@ -41,109 +60,213 @@ public class ControleLancamentoLegacy {
 		this.dateEfetivaLancamento = dateEfetivaLancamento;
 	}
 
-	public LancamentoContaCorrente getLancamentoContaCorrenteCliente() {
+	/**
+	 * 
+	 * @return
+	 */
+	public LancamentoLegacy getLancamentoContaCorrenteCliente() {
 		return lancamentoContaCorrenteCliente;
 	}
 
+	/**
+	 * 
+	 * @param lancamentoContaCorrenteCliente
+	 */
 	public void setLancamentoContaCorrenteCliente(
-			LancamentoContaCorrente lancamentoContaCorrenteCliente) {
+			LancamentoLegacy lancamentoContaCorrenteCliente) {
 		this.lancamentoContaCorrenteCliente = lancamentoContaCorrenteCliente;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getDataEfetivaLancamento() {
 		return dataEfetivaLancamento;
 	}
 
+	/**
+	 * 
+	 * @param dataEfetivaLancamento
+	 */
 	public void setDataEfetivaLancamento(String dataEfetivaLancamento) {
 		this.dataEfetivaLancamento = dataEfetivaLancamento;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getDataLancamentoContaCorrenteCliente() {
 		return dataLancamentoContaCorrenteCliente;
 	}
 
+	/**
+	 * 
+	 * @param dataLancamentoContaCorrenteCliente
+	 */
 	public void setDataLancamentoContaCorrenteCliente(
 			String dataLancamentoContaCorrenteCliente) {
 		this.dataLancamentoContaCorrenteCliente = dataLancamentoContaCorrenteCliente;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getNumeroEvento() {
 		return numeroEvento;
 	}
 
+	/**
+	 * 
+	 * @param numeroEvento
+	 */
 	public void setNumeroEvento(int numeroEvento) {
 		this.numeroEvento = numeroEvento;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getDescricaoGrupoPagamento() {
 		return descricaoGrupoPagamento;
 	}
 
+	/**
+	 * 
+	 * @param descricaoGrupoPagamento
+	 */
 	public void setDescricaoGrupoPagamento(String descricaoGrupoPagamento) {
 		this.descricaoGrupoPagamento = descricaoGrupoPagamento;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getCodigoIdentificadorUnico() {
 		return codigoIdentificadorUnico;
 	}
 
+	/**
+	 * 
+	 * @param codigoIdentificadorUnico
+	 */
 	public void setCodigoIdentificadorUnico(int codigoIdentificadorUnico) {
 		this.codigoIdentificadorUnico = codigoIdentificadorUnico;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNomeBanco() {
 		return nomeBanco;
 	}
 
+	/**
+	 * 
+	 * @param nomeBanco
+	 */
 	public void setNomeBanco(String nomeBanco) {
 		this.nomeBanco = nomeBanco;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getQuantidadeLancamentoRemessa() {
 		return quantidadeLancamentoRemessa;
 	}
 
+	/**
+	 * 
+	 * @param quantidadeLancamentoRemessa
+	 */
 	public void setQuantidadeLancamentoRemessa(int quantidadeLancamentoRemessa) {
 		this.quantidadeLancamentoRemessa = quantidadeLancamentoRemessa;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNumeroRaizCNPJ() {
 		return numeroRaizCNPJ;
 	}
 
+	/**
+	 * 
+	 * @param numeroRaizCNPJ
+	 */
 	public void setNumeroRaizCNPJ(String numeroRaizCNPJ) {
 		this.numeroRaizCNPJ = numeroRaizCNPJ;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNumeroSufixoCNPJ() {
 		return numeroSufixoCNPJ;
 	}
 
+	/**
+	 * 
+	 * @param numeroSufixoCNPJ
+	 */
 	public void setNumeroSufixoCNPJ(String numeroSufixoCNPJ) {
 		this.numeroSufixoCNPJ = numeroSufixoCNPJ;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double getValorLancamentoRemessa() {
 		return valorLancamentoRemessa;
 	}
 
+	/**
+	 * 
+	 * @param valorLancamentoRemessa
+	 */
 	public void setValorLancamentoRemessa(double valorLancamentoRemessa) {
 		this.valorLancamentoRemessa = valorLancamentoRemessa;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public long getDateLancamentoContaCorrenteCliente() {
 		return dateLancamentoContaCorrenteCliente;
 	}
 
+	/**
+	 * 
+	 * @param dateLancamentoContaCorrenteCliente
+	 */
 	public void setDateLancamentoContaCorrenteCliente(
 			long dateLancamentoContaCorrenteCliente) {
 		this.dateLancamentoContaCorrenteCliente = dateLancamentoContaCorrenteCliente;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public long getDateEfetivaLancamento() {
 		return dateEfetivaLancamento;
 	}
 
+	/**
+	 * 
+	 * @param dateEfetivaLancamento
+	 */
 	public void setDateEfetivaLancamento(long dateEfetivaLancamento) {
 		this.dateEfetivaLancamento = dateEfetivaLancamento;
 	}

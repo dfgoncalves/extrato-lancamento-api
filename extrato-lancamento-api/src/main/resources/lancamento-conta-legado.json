@@ -11,7 +11,7 @@
 		  "nomeSituacaoRemessa": "Pago",
 		  "dadosDomicilioBancario": {
 			"codigoBanco": 123,
-			"numeroAgencia": 1,
+			"numeroAgencia": 0001,
 			"numeroContaCorrente": "00000000065470"
 		  },
 		  "nomeTipoOperacao": "regular"
@@ -36,7 +36,7 @@
 		  "nomeSituacaoRemessa": "Pago",
 		  "dadosDomicilioBancario": {
 			"codigoBanco": 123,
-			"numeroAgencia": 2,
+			"numeroAgencia": 0002,
 			"numeroContaCorrente": "00000000065470"
 		  },
 		  "nomeTipoOperacao": "regular"
